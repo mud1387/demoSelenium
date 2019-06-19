@@ -5,14 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.demo.config.config;
+
 public class loginTest {
 
+	public static config cf;
+	
 	public static void main(String[] args) throws InterruptedException {
 		// objects and variables instantiation
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mchowdha\\eclipse-workspace\\demo\\src\\resources\\chromedriver.exe");
+		cf= new config();
+		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+cf.getChromePath());
 		WebDriver driver = new ChromeDriver();
-		String appUrl = "http://automationpractice.com/index.php";
+		String appUrl = cf.getUrl();
 		
 
 		// launch the chrome browser and open the application url
@@ -47,13 +53,13 @@ public class loginTest {
 		if (loginEmailAddress.isDisplayed()) {
 			
 			loginEmailAddress.clear();
-			loginEmailAddress.sendKeys("abcd@gmail.com");
+			loginEmailAddress.sendKeys(cf.getUsername());
 		}		
 		
 		WebElement loginPassword = driver.findElement(By.xpath("//*[@id='passwd']"));
 		
 		loginPassword.clear();
-		loginPassword.sendKeys("1234");
+		loginPassword.sendKeys(cf.getPassword());
 		
 		WebElement submitButton = driver.findElement(By.id("SubmitLogin"));
 		submitButton.click();

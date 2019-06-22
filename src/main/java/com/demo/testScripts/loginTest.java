@@ -27,8 +27,7 @@ public class loginTest {
 		// maximize the browser window
 
 		driver.manage().window().maximize();
-		// declare and initialize the variable to store the expected title of the
-		// webpage.
+		// declare and initialize the variable to store the expected title of the webpage.
 
 		String expectedTitle = "My Store";
 		// fetch the title of the web page and save it into a string variable
@@ -40,13 +39,15 @@ public class loginTest {
 		if (expectedTitle.equals(actualTitle))
 		{
 			System.out.println("Verification Successful - The correct title is displayed on the web page.");
-		}else{
+		}
+		else{
 			System.out.println("Verification Failed - An incorrect title is displayed on the web page.");
 		}
 
 		WebElement signIn = driver.findElement(By.xpath("//*[@id='header']/div[2]/div/div/nav/div[1]/a"));
 		
 		signIn.click();
+		
 		
 		WebElement loginEmailAddress= driver.findElement(By.xpath("//*[@id='email']"));
 		
@@ -71,6 +72,8 @@ public class loginTest {
 			System.out.println("Alert error found");
 		}
 		// close the web browser
+		
+		
 		
 		Thread.sleep(500);
 

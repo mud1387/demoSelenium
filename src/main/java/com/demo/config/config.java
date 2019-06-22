@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class config {
+import com.demo.helper.browserType.browserType;
+
+public class config implements propertyReader {
 
 	static Properties pro;
 	
@@ -44,6 +46,21 @@ public class config {
 		return pro.getProperty("password");
 	}
 	
+	public String getHomePageTitle() {
+		
+		return pro.getProperty("homePageTitle");
+	}
+
+	public browserType getBrowser() {
+		// TODO Auto-generated method stub
+		return browserType.valueOf(pro.getProperty("browser"));
+	}
+
+	public int getImplicitWait() {
+		// TODO Auto-generated method stub
+		return Integer.parseInt(pro.getProperty("implicitwait"));
+	}
+
 		
 	
 }

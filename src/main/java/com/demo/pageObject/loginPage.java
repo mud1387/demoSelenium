@@ -51,6 +51,7 @@ public class loginPage {
 	public void clickOnSubmitBtn() {
 		vh.isDisplayed(submitButton);
 		submitButton.click();
+		
 	}
 	
 	public void enterEmailAddress(String email) {

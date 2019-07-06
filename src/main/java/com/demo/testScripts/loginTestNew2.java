@@ -19,7 +19,7 @@ import com.demo.testBase.testBase;
 
 public class loginTestNew2 extends testBase {
 	
-	@Test
+	@Test()
 	public void loginTest() throws Exception {
 
 		getApplicationUrl(cf.getUrl());
@@ -35,14 +35,7 @@ public class loginTestNew2 extends testBase {
 		/*WebElement errorAlertpwd = driver.findElement(By.xpath("//li[contains(text(),'Invalid password.')]"));
 		WebElement errorAlertEmail=driver.findElement(By.xpath("//li[contains(text(),'Invalid email address.')]"));
 		*/
-		WebElement errorAuthentication=driver.findElement(By.xpath("//li[contains(text(),'Authentication failed.')]"));
-		/*if(vh.isDisplayed(errorAlertEmail)) {
-			System.out.println("Test Script executed");
-		}
-		else if (vh.isDisplayed(errorAlertpwd)) {
-			System.out.println("Test Script executed");
-		}
-		else*/ 
+		WebElement errorAuthentication=driver.findElement(By.xpath("//div[@id='create_account_error']"));
 		if (vh.isDisplayed(errorAuthentication)) {
 			System.out.println("Test Script executed");
 		}
@@ -52,5 +45,6 @@ public class loginTestNew2 extends testBase {
 
 	}
 
+	
 	
 }

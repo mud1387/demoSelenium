@@ -1,84 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-06-23T15:12:43Z" name="Default suite" finished-at="2019-06-23T15:13:33Z" duration-ms="49751">
+  <suite started-at="2019-07-06T06:16:25Z" name="Default suite" finished-at="2019-07-06T06:16:36Z" duration-ms="11641">
     <groups>
+      <group name="Cucumber">
+        <method signature="testRun.scenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.demo.testRunner.testRun@27ae2fd0]" name="scenario" class="com.demo.testRunner.testRun"/>
+      </group> <!-- Cucumber -->
     </groups>
-    <test started-at="2019-06-23T15:12:43Z" name="Default test" finished-at="2019-06-23T15:13:33Z" duration-ms="49751">
-      <class name="com.demo.testScripts.loginTestNew2">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.demo.testScripts.loginTestNew2@fdefd3f]" started-at="2019-06-23T15:12:43Z" name="beforeTest" finished-at="2019-06-23T15:12:53Z" duration-ms="9581" status="PASS">
+    <test started-at="2019-07-06T06:16:25Z" name="Default test" finished-at="2019-07-06T06:16:36Z" duration-ms="11641">
+      <class name="com.demo.testRunner.testRun">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.demo.testRunner.testRun@27ae2fd0]" started-at="2019-07-06T06:16:25Z" name="setUpClass" finished-at="2019-07-06T06:16:25Z" duration-ms="163" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="loginTest()[pri:0, instance:com.demo.testScripts.loginTestNew2@fdefd3f]" started-at="2019-06-23T15:12:53Z" name="loginTest" finished-at="2019-06-23T15:13:31Z" duration-ms="38050" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.demo.testScripts.loginTestNew2@fdefd3f]" started-at="2019-06-23T15:13:31Z" name="afterTest" finished-at="2019-06-23T15:13:33Z" duration-ms="2066" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=75.0.3770.100)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'LNAR-PC073LMQ', ip: '192.168.2.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\mchowdha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62656}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 23953b18cace475383fd97430eff75c1]]>
-            </message>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="scenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.demo.testRunner.testRun@27ae2fd0]" started-at="2019-07-06T06:16:25Z" name="scenario" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2019-07-06T06:16:36Z" duration-ms="11320" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Error alert displayed on logging with invalid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=75.0.3770.100)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'LNAR-PC073LMQ', ip: '192.168.2.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\mchowdha\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62656}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 23953b18cace475383fd97430eff75c1
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:438)
-at com.demo.testBase.testBase.afterTest(testBase.java:40)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.TestRunner.afterRun(TestRunner.java:725)
-at org.testng.TestRunner.run(TestRunner.java:509)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+              <![CDATA[java.lang.NullPointerException
+at com.demo.stepDefinitions.steps.page_title_should_be(steps.java:40)
+at ✽.page title should be "My Store"(file:src/features/login.feature:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- com.demo.testScripts.loginTestNew2 -->
+        </test-method> <!-- scenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.demo.testRunner.testRun@27ae2fd0]" started-at="2019-07-06T06:16:36Z" name="tearDownClass" finished-at="2019-07-06T06:16:36Z" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.demo.testRunner.testRun -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

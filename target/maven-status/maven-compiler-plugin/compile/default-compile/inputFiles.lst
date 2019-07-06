@@ -6,9 +6,12 @@ C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\helper\verificat
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\helper\wait\waitHelper.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\pageObject\loginPage.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\helper\browserType\browserType.java
+C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\helper\excel\excelHelper.java
+C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\stepDefinitions\steps.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\testBase\testBase.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\App.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\config\propertyReader.java
+C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\testRunner\testRun.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\testScripts\loginTest.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\testScripts\loginTestNew.java
 C:\Users\mchowdha\eclipse-workspace\demo\src\main\java\com\demo\config\config.java

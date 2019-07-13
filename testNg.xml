@@ -1,10 +1,13 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
-
-<suite thread-count="1" verbose="1" name="demo Suite" annotations="JDK" parallel="tests">
-         
-  <test name="demo">
-	 <classes>
-	   <class name="com.demo.testRunner.testRun"/>
-	 </classes>
-   </test>
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">  
+<suite name="Demo Suite" verbose="1" thread-count="1" parallel="tests" configfailurepolicy="continue">  
+	 <test name="automation">  
+		 <classes>
+			 <class name="com.demo.testRunner.testRun">  
+				 <methods>
+					 <include name="scenarioRun"/>  
+				 </methods>
+			</class>
+		</classes>
+	</test>
 </suite>

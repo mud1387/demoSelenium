@@ -19,30 +19,37 @@ import io.cucumber.testng.TestNGCucumberRunner;
         monochrome=true,
         plugin = {
                 "pretty",
-                "html:test-output"
+                "json:target/report/cucumber2.json"
         })
 public class testRun extends testBase{
 
 	private TestNGCucumberRunner testNGCucumberRunner;  
 
-	  @BeforeClass(alwaysRun = true)  
+	@BeforeClass(alwaysRun = true)  
 	    public void setUpClass() throws Exception {  
-	        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());  
+	        testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	  }  
 
 	    @Test(groups = "Cucumber", description = "Runs Cucumber Feature", dataProvider = "scenarios")  
-	    public void scenario(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {  
+	    public void scenarioRun(PickleEventWrapper pickleEvent, CucumberFeatureWrapper cucumberFeature) throws Throwable {  
 	        testNGCucumberRunner.runScenario(pickleEvent.getPickleEvent());  
+	        
 	  }  
 
-	    @DataProvider  
+	    @DataProvider(name="scenarios")  
 	  public Object[][] scenarios() {  
-	        return testNGCucumberRunner.provideScenarios();  
-	  }  
+		/*
+		 * Object[][] obj=testNGCucumberRunner.provideScenarios(); for (int i = 0; i <
+		 * obj.length; i++) { for (int j = 0; j < obj[i].length; j++) {
+		 * System.out.println(obj[i][j]); } }
+		 */
+	         return testNGCucumberRunner.provideScenarios();
+	    }  
 
 	    @AfterClass(alwaysRun = true)  
 	    public void tearDownClass() throws Exception {  
 	        testNGCucumberRunner.finish();  
 	  }  
 	
+	    
 }

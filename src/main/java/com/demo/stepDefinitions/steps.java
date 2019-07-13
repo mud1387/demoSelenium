@@ -1,12 +1,10 @@
 package com.demo.stepDefinitions;
 
-import java.io.File;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.demo.config.config;
 import com.demo.helper.assertion.assertionHelper;
 import com.demo.helper.excel.excelHelper;
 import com.demo.helper.verification.verificationHelper;
@@ -23,6 +21,10 @@ public class steps {
 	public testBase tb;
 	public loginPage lp;
 	public verificationHelper vh;
+	
+	public static excelHelper exc= new excelHelper();
+	public static Object[][] obj=exc.getExcelData(System.getProperty("user.dir")+"\\src\\resources\\testData.xlsx", "login");
+
 	
 	@Given("^User opens Chrome browser and launches the application URL \"([^\"]*)\"$")
 	public void user_opens_Chrome_browser_and_launches_the_application_URL(String url) throws Throwable {
@@ -52,12 +54,34 @@ public class steps {
 	    Thread.sleep(3000);
 	}
 
+	/*
+	 * @When("^user enters username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
+	 * public void user_enters_username_as_and_password_as_exceldata(String dataRow,
+	 * String dataRow1) throws Throwable { exc.getExcelDataSet(obj, dataRow);
+	 * lp.enterEmailAddress(excelHelper.username);
+	 * lp.enterPassword(excelHelper.password); }
+	 */
+
 	@When("^user enters username as \"([^\"]*)\" and password as \"([^\"]*)\"$")
 	public void user_enters_username_as_and_password_as(String username, String password) throws Throwable {
-	    lp.enterEmailAddress(username);
+		lp.enterEmailAddress(username);
 	    lp.enterPassword(password);
 	}
+	
+	@When("user enters username as {string}")
+	public void user_enters_username_as(String dataRow) {
+		
+		 exc.getExcelDataSet(obj, dataRow);
+		 lp.enterEmailAddress(excelHelper.username);
+	}
 
+	@When("user enters password as {string}")
+	public void user_enters_password_as(String dataRow) {
+		 exc.getExcelDataSet(obj, dataRow);
+		 lp.enterPassword(excelHelper.password);
+	}
+
+	
 	@When("^clicks on submit button$")
 	public void clicks_on_submit_button() throws Throwable {
 	    lp.clickOnSubmitBtn();

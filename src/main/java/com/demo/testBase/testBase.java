@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -107,7 +106,7 @@ public class testBase {
 	
 	public static void getExcel() {
 		Object[][] obj=ex.getExcelData(System.getProperty("user.dir")+"\\src\\resources\\testData.xlsx", "login");
-		ex.getExcelDataSet(obj);
+		//ex.getExcelDataSet(obj);
 		
 	}
 

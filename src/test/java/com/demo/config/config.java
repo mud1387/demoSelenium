@@ -12,7 +12,7 @@ public class config implements propertyReader {
 	
 	public config() {
 		
-		File file= new File(System.getProperty("user.dir")+"\\src\\main\\java\\com\\demo\\config\\config.properties");
+		File file= new File(System.getProperty("user.dir")+"\\src\\test\\java\\com\\demo\\config\\config.properties");
 		try {
 			FileInputStream fis= new FileInputStream(file);
 			pro= new Properties();

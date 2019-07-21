@@ -41,7 +41,7 @@ public class testBase {
 	@AfterTest
 	public void afterTest() {
 		driver.close();
-		System.exit(0);
+		//System.exit(0);
 	}
 
 	public WebDriver getBrowserObject(browserType btyp) throws Exception {
